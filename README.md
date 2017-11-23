@@ -57,3 +57,6 @@ Now that you have the creds, how did you get them? From what insecure package?<B
   
 17. Via RDP, connect to the DC with the new creds for Alice.<BR>
 18. How did you find missing patches before?<BR>
+  
+  
+  
