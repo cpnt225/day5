@@ -1,11 +1,18 @@
 1. Download M1 from Google Drive
+
 2. Start:
+
 -Kali2
+
 -2k8dc_a2
+
 -2k8m2_a1
 
+
 3. On the Kali2 host, set a static IP 192.168.168.110
+
 ifconfig eth0 192.168.168.110
+
 ifconfig eth0 netmask 255.255.255.0
 
 4. Repeat last week’s step's to gain the password hash from M2 (refer to last week's notes). You'll want to grab the 32 characters on one side of the : and the 32 characters afterwards, such as aad3b435b51404eeaad3b435b51404ee:e7bf67913f1f54abf11af55aee36b9e9
